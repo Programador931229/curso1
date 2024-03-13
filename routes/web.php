@@ -18,4 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cursos', CursoController::class);
+/*Rutas Agrupadas*/
+
+Route::controller(CursoController::class)->group(function(){
+    Route::get('/cursos', 'index');
+    Route::get('/cursos/create', 'create');
+    Route::get('/cursos/{curso}', 'show');
+});
+
+/* Se declaran las Rutas de forma tradiciuonal
+
+Route::get('/cursos', [CursoController::class, 'index']);
+Route::get('/cursos/create', [CursoController::class, 'create']);
+Route::get('/cursos/{curso}', [CursoController::class, 'show']);
+*/
