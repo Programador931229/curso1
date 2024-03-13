@@ -14,11 +14,7 @@ class CursoSeeder extends Seeder
     public function run(): void
     {
         //
-        $Curso = new Curso();
-        $Curso->nombre = 'PHP';
-        $Curso->descripcion = 'Lenguaje Orientado a Objetos';
-        $Curso->clasificacion = 'Te ayudara a crear grandes proyectos';
-        $Curso->save();
+        //Curso::factory(50)->create();
 
     }
 }
