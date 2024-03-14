@@ -31,6 +31,11 @@ class CursoController extends Controller
         return redirect()->route('cursos.show', $curso->id);
     }
 
+    public function edit($id){
+        $curso = Curso::find($id);
+        return view('cursos.edit', compact('curso') );
+    }
+
     public function show($id){
         
         // compact('curso'); es igual a ['curso' => $curso];
