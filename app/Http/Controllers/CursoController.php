@@ -18,6 +18,10 @@ class CursoController extends Controller
         return view('cursos.create');
     }
 
+    public function store(){
+        //
+    }
+
     public function show($id){
         
         // compact('curso'); es igual a ['curso' => $curso];

@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>Aqui podras crear un nuevo curso</h1>
-    <form action="" method="post">
+    <form action="{{route('cursos.store')}}" method="POST">
         <label>
             Nombre:
             <br>
@@ -22,7 +22,7 @@
             <input type="text" name="clasificacion">
         </label>
         <br>
-        <button>
+        <button type="submit">
             Guardar
         </button>
     </form>
