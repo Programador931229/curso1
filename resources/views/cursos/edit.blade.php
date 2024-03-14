@@ -6,7 +6,7 @@
 <a href="{{route('cursos.index')}}">volver a cursos</a>
 <h1>Editar el curso {{$curso->nombre}}</h1>
 
-<form action="{{route('cursos.update', $curso->id)}}" method="POST">
+<form action="{{route('cursos.update', $curso)}}" method="POST">
     
     @csrf
     @method('put')
