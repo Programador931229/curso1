@@ -5,6 +5,9 @@
 @section('content')
     <h1>Aqui podras crear un nuevo curso</h1>
     <form action="{{route('cursos.store')}}" method="POST">
+        
+        @csrf
+        
         <label>
             Nombre:
             <br>

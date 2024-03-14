@@ -18,8 +18,17 @@ class CursoController extends Controller
         return view('cursos.create');
     }
 
-    public function store(){
+    public function store(Request $request){
         //
+        $curso = new Curso();
+        
+        $curso->nombre = $request->nombre;
+        $curso->descripcion = $request->descripcion;
+        $curso->clasificacion = $request->clasificacion;
+        
+        $curso->save();
+        
+        return redirect()->route('cursos.show', $curso->id);
     }
 
     public function show($id){
